@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# Hero Section - Vibe Coder Mini Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a modern, responsive Hero Section built using **React** and **Tailwind CSS**, as part of the 1-hour mini challenge from Vibe Coder.
 
-Currently, two official plugins are available:
+## 🔥 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Editable inline text (Headline, Subheadline)
+- CTA button
+- Hero image
+- "Regenerate with AI" button to change content randomly
+- Responsive design using Tailwind CSS
 
-## Expanding the ESLint configuration
+## ⚙️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- Vite
+- Tailwind CSS
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📦 Setup Instructions
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/youssefelaalem/hero_section
+   cd hero-section
+2. Install dependencies:
+    npm install
+3.Run the development server:
+    npm run dev
+4.Open in browser at:
+    http://localhost:5173    
+**🎥 Loom Video Submission**
+Watch the walkthrough and explanation here:
+    https://drive.google.com/file/d/1xNlzssBCQN9_JGurIu00s3Rs3v5PAsMH/view?usp=sharing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Made with by Youssef Muhammad Ashref Elaalem

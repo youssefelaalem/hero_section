@@ -6,19 +6,7 @@ import EditIcon from "../assets/EditIcon.tsx";
 function Hero_Section() {
   const [loading, setLoading] = useState(false);
   const [isEditMode, setIsEditMode] = useState(false);
-  // const heroVariants = [
-  //   {
-  //     headline: "Build Fast, Launch Faster",
-  //     subheadline: "Create stunning websites with AI assistance.",
-  //     image: "/assets/hero1.svg",
-  //   },
-  //   {
-  //     headline: "Your Next Big Idea Starts Here",
-  //     subheadline: "Design, develop, and deploy with confidence.",
-  //     image: "/assets/hero2.svg",
-  //   },
-  //   // Add more dummy data
-  // ];
+
   const [content, setContent] = useState({
     headline: HEADLINES[0],
     subheadline: SUBHEADLINES[0],
@@ -44,7 +32,7 @@ function Hero_Section() {
       image: getRandomImage(),
     });
   };
-
+  //for edit and change content if there is real backend to save in database
   const handleTextChange = (field: string, value: string) => {
     setContent((prev) => ({ ...prev, [field]: value }));
   };
