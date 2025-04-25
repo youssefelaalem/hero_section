@@ -1,5 +1,8 @@
 # Hero Section - Vibe Coder Mini Challenge
 
+## Live Deploy URL: 
+   https://youssefelaalem.github.io/hero_section/
+
 This project is a modern, responsive Hero Section built using **React** and **Tailwind CSS**, as part of the 1-hour mini challenge from Vibe Coder.
 
 ## 🔥 Features
