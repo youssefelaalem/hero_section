@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { HEADLINES, SUBHEADLINES } from "../constants/content";
 import { PuffLoader } from "react-spinners";
+import EditIcon from "../assets/EditIcon.tsx";
 
 function Hero_Section() {
   const [loading, setLoading] = useState(false);
+  const [isEditMode, setIsEditMode] = useState(false);
   // const heroVariants = [
   //   {
   //     headline: "Build Fast, Launch Faster",
@@ -57,8 +59,12 @@ function Hero_Section() {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Text Content */}
         <div className="flex-1 space-y-6">
+          <EditIcon
+            onClick={() => setIsEditMode(!isEditMode)}
+            isEditMode={isEditMode}
+          />
           <h1
-            contentEditable
+            contentEditable={isEditMode}
             suppressContentEditableWarning
             className="text-5xl font-bold text-gray-900 outline-none hover:bg-gray-100 rounded-lg p-2"
             onBlur={(e) =>
@@ -69,7 +75,7 @@ function Hero_Section() {
           </h1>
 
           <p
-            contentEditable
+            contentEditable={isEditMode}
             suppressContentEditableWarning
             className="text-xl text-gray-600 outline-none hover:bg-gray-100 rounded-lg p-2"
             onBlur={(e) =>
@@ -78,6 +84,16 @@ function Hero_Section() {
           >
             {content.subheadline}
           </p>
+          {isEditMode && (
+            <div className="flex gap-4 sm-max:justify-center">
+              <button
+                onClick={() => setIsEditMode(false)}
+                className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-black transition-all"
+              >
+                Change a Content
+              </button>
+            </div>
+          )}
 
           <div className="flex gap-4 sm-max:justify-center">
             <button className="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-black transition-all">
@@ -106,7 +122,5 @@ function Hero_Section() {
     </section>
   );
 }
-
-Hero_Section.propTypes = {};
 
 export default Hero_Section;
